@@ -1,5 +1,5 @@
 import json
-from base64 import b32hexencode
+from base64 import b64encode
 from os import urandom
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest
@@ -21,12 +21,12 @@ def usercheck(request):
             user = User.objects.get(email=data['email'])
             return HttpResponse(json.dumps({
                 "user": user.username,
-                "calibration_data": b32hexencode(urandom(1024)).decode("utf-8")
+                "calibration_data": b64encode(urandom(1024)).decode("utf-8")
             }))
         except User.DoesNotExist:
             return HttpResponse(json.dumps({
                 "user": None,
-                "calibration_data": b32hexencode(urandom(1024)).decode("utf-8")
+                "calibration_data": b64encode(urandom(1024)).decode("utf-8")
             }))
     return HttpResponseBadRequest(_("ERROR: Invalid request."))
 
