@@ -9,6 +9,7 @@ RUN apt-get update && \
 	python3-dev \
 	python3-setuptools \
 	python3-pip \
+    gettext \
 	libmariadbclient-dev-compat && \
 	pip3 install uwsgi mysqlclient && \
     rm -rf /var/lib/apt/lists/*
