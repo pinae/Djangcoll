@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-07 09:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: imgcoll/forms.py:7
+msgid "email"
+msgstr "E-Mail"
+
+#: imgcoll/forms.py:8
+msgid "Enter your email for updates."
+msgstr "Geben Sie Ihre E-Mail-Adresse für Updates an."
+
+#: imgcoll/models.py:11
+msgid "smartphone"
+msgstr "Smartphone"
+
+#: imgcoll/models.py:12
+msgid "manufacturer and name of your cell phone"
+msgstr "Hersteller und Modellbezeichnung des Smartphones"
+
+#: imgcoll/models.py:15
+msgid "calibration image"
+msgstr "Kalibrierungsbild"
+
+#: imgcoll/models.py:16
+msgid "image of an empty plate for calibration"
+msgstr "Kalibrierungsbild von einem leeren Teller"
+
+#: imgcoll/models.py:19
+msgid "image of a potato slice"
+msgstr "Foto einer Kartoffelscheibe"
+
+#: imgcoll/models.py:22
+msgid "image of some flour"
+msgstr "Foto von etwas Mehl"
+
+#: imgcoll/models.py:25
+msgid "image of some milk"
+msgstr "Foto einer Milchpfütze"
+
+#: imgcoll/models.py:28
+msgid "name of the food to analyze"
+msgstr "Bezeichnung des zu analysierenden Nahrungsmittels"
+
+#: imgcoll/models.py:31
+msgid "image to analyze"
+msgstr "Bild des zu analysierenden Nahrungsmittels"
+
+#: imgcoll/models.py:34
+msgid "comment"
+msgstr "Kommentar"
+
+#: imgcoll/models.py:35
+msgid "Let us know how to improve our service!"
+msgstr "Wie können wir die Software verbessern?"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:13
+msgid "Food analyzer beta"
+msgstr "Nahrungs-Analysator BETA"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:15
+msgid ""
+"Please supply a mail address if you like to get notified if your data "
+"calibration gets updated. If you supply am mail adderss we will create an "
+"account for this address."
+msgstr ""
+"Geben Sie eine E-Mail-Adresse an, damit wir Sie benachrichtigen können, wenn "
+"Ihre Kalibrierungsdaten ein Update bekommen. Wenn Sie eine E-Mail angeben, "
+"erstellen wir einen Account zu dieser Adresse."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:16
+msgid ""
+"Please fill in the name of your cell phone model. This greatly helps to "
+"cluster the training data for different CMOS sensors. You can expect to get "
+"much better results if you supply the correct manufacturer and model of your "
+"device."
+msgstr ""
+"Geben Sie unbedingt die Typenbezeichnung Ihres Smartphones an. Eine korrekte "
+"Angabe von Hersteller und Modellbezeichnung hilft uns die Trainingsdaten für "
+"verschiedene CMOS-Sensoren zu clustern. Mit einer korrekten Angabe bekommen "
+"Sie im Allgemeinen bessere Ergebnisse."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:17
+msgid ""
+"The first image should contain an empty plate. This image is used for camera "
+"calibration. The pictures of the potato slice, the flour and the milk are "
+"used for calibrating the near infrared raw data. Please be aware that poor "
+"lighting conditions for these pictures may greatly reduce the classification "
+"accuracy."
+msgstr ""
+"Das erste Bild sollte einen leeren weißen Teller zeigen. Wir nutzen dieses "
+"Bild, um die Kamera und Linse zu kalibrieren. Die Bilder von einer "
+"Kartoffelscheibe, einem Mehl-Bett und von der Milchpfütze nutzen wir, um die "
+"Nahinfrarot-Anteile in den Rohdaten vom CMOS-Sensor zu kalibrieren. Bitte "
+"beachten Sie, dass ungenügende Lichtverhältnisse die "
+"Klassifizierungsgenauigkeit stark beeinträchtigen."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:18
+msgid ""
+"Place the food you want to classify on the same plate as shown in the "
+"calibration image. Take a picture, upload it in the last field and supply a "
+"descriptive name to the food in the picture. Single ingredients work a bit "
+"more reliably than cooked dishes but you can upload either one."
+msgstr ""
+"Platzieren Sie das zu klassifizierende Nahrungsmittel auf einem gleichen "
+"Teller wie im Kalibrierungsbild. Schießen Sie dann das Foto und laden Sie es "
+"zusammen mit einer aussagekräftigen Beschreibung hoch. Einzelne Zutaten "
+"geben etwas bessere Ergebnisse; Sie können aber auch ganze Gerichte "
+"klassifizieren lassen."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:23
+msgid "Upload and analyze"
+msgstr "Hochladen und Analysieren"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:27
+msgid "Succesfully uploaded: "
+msgstr "Erfolgreich hochgeladen: "
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:29
+msgid "Comment: "
+msgstr "Kommentar: "
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:30
+msgid "Calibration data:"
+msgstr "Kalibrierungsbild:"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:31
+msgid "Email: "
+msgstr "E-Mail: "
+
+#: imgcoll/views.py:17
+msgid "ERROR: Request body was not valid JSON."
+msgstr "FEHLER: Die übertragenen Daten waren nicht im JSON-Format."
+
+#: imgcoll/views.py:19
+msgid "ERROR: You have to send a email address."
+msgstr "FEHLER: Sie müssen das Feld „email“ angeben."
+
+#: imgcoll/views.py:31
+msgid "ERROR: Invalid request."
+msgstr "FEHLER: Falsches Anfrageformat."
