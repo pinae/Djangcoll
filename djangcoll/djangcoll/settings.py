@@ -20,13 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
+DOMAIN = getenv('DOMAIN', 'http://127.0.0.1:8000')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = getenv('DJANGO_SECRET', "django-insecure-9)k$q=jq6plz=l&=s3ucbz5eo&m97s&5fj6h)*a=^(2qy^9%()")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('DJANGO_DEBUG', True) in ("True", "true", "1", 1, "yes", "y", True)
+DEBUG = getenv('DJANGO_DEBUG_MODE', True) in ("True", "true", "1", 1, "yes", "y", True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', getenv('DOMAIN_WITHOUT_PROTOCOL', '127.0.0.1:8000')]
 
 
 # Application definition
@@ -71,16 +73,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "djangcoll.wsgi.application"
 
+CSRF_TRUSTED_ORIGINS = [DOMAIN]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': getenv('DJANGO_DB_ENGINE', 'django.db.backends.sqlite3'),
+        'NAME': getenv('DB_NAME', BASE_DIR.joinpath('db.sqlite3')),
     }
 }
+e = getenv('DB_USER')
+if e:
+    DATABASES['default']['USER'] = e
+e = getenv('DB_PASSWORD')
+if e:
+    DATABASES['default']['PASSWORD'] = e
+e = getenv('DB_HOST')
+if e:
+    DATABASES['default']['HOST'] = e
+e = getenv('DB_PORT')
+if e:
+    DATABASES['default']['PORT'] = e
 
 
 # Password validation
@@ -105,9 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = getenv('DJANGO_LANGUAGE_CODE', 'de')
 
-TIME_ZONE = "UTC"
+TIME_ZONE = getenv('DJANGO_TIME_ZONE', 'Europe/Berlin')
 
 USE_I18N = True
 
@@ -118,12 +133,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+e = getenv('DJANGO_STATIC_ROOT')
+if e:
+    STATIC_ROOT = e
 
 # Base url to serve media files
 MEDIA_URL = 'media/'
 
 # Path where media is stored
-MEDIA_ROOT = path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = getenv('DJANGO_STATIC_MEDIA', BASE_DIR.joinpath('media'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
