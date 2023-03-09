@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 09:26+0100\n"
+"POT-Creation-Date: 2023-03-09 14:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,22 +136,54 @@ msgstr "Erfolgreich hochgeladen: "
 msgid "Comment: "
 msgstr "Kommentar: "
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:30
+#: imgcoll/templates/imgcoll/upload_calibration.html:32
+msgid "Your data is being processed..."
+msgstr "Ihre Daten werden verarbeitet. Bitte Warten..."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:33
+msgid "processing..."
+msgstr "Verarbeitung läuft..."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:39
+msgid "measured parameter"
+msgstr "Messgröße"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:39
+msgid "measured value"
+msgstr "Messwert"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:40
+msgid "amylum"
+msgstr "Stärkeprotein"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:41
+msgid "lactose"
+msgstr "Laktosegehalt"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:42
+msgid "insect protein"
+msgstr "Insektenprotein"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:46
 msgid "Calibration data:"
 msgstr "Kalibrierungsbild:"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:31
+#: imgcoll/templates/imgcoll/upload_calibration.html:47
 msgid "Email: "
 msgstr "E-Mail: "
 
-#: imgcoll/views.py:17
+#: imgcoll/views.py:21 imgcoll/views.py:64
 msgid "ERROR: Request body was not valid JSON."
 msgstr "FEHLER: Die übertragenen Daten waren nicht im JSON-Format."
 
-#: imgcoll/views.py:19
+#: imgcoll/views.py:23
 msgid "ERROR: You have to send a email address."
 msgstr "FEHLER: Sie müssen das Feld „email“ angeben."
 
-#: imgcoll/views.py:31
+#: imgcoll/views.py:35 imgcoll/views.py:101
 msgid "ERROR: Invalid request."
 msgstr "FEHLER: Falsches Anfrageformat."
+
+#: imgcoll/views.py:66
+msgid "ERROR: You have to send a processing ID."
+msgstr "FEHLER: Sie müssen eine Datensatz-ID angeben."

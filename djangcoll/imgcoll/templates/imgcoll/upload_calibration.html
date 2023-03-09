@@ -27,12 +27,28 @@
       <h3>{% translate "Succesfully uploaded: " %}{{cal_obj.food_name}}</h3>
       <img src="{{ cal_obj.analyze_image.url}}" alt="analyzed image" style="max-height:500px">
       <p>{% translate "Comment: " %}{{ cal_obj.comment }}</p>
+      <div id="processing">
+        <div id="wait_block">
+          <h4>{% translate "Your data is being processed..." %}</h4>
+          <img src="{% static 'imgcoll/gears.svg' %}" alt="{% translate "processing..." %}" />
+        </div>
+        <div style="display: none" id="processingID">{{ cal_obj.pk }}</div>
+        {% csrf_token %}
+        <div id="results" style="display: none;">
+          <table>
+            <tr><th>{% translate "measured parameter" %}</th><th>{% translate "measured value" %}</th></tr>
+            <tr><td>{% translate "amylum" %}</td><td id="amylum"></td></tr>
+            <tr><td>{% translate "lactose" %}</td><td id="lactose"></td></tr>
+            <tr><td>{% translate "insect protein" %}</td><td id="insect_protein"></td></tr>
+          </table>
+        </div>
+      </div>
       <h4>{% translate "Calibration data:" %}</h4>
-      <p>{% translate "Email: " %}{{ cal_obj.email }}</p>
-      <img src="{{ cal_obj.calibration_image.url}}" alt="camera calibration" style="max-height:300px">
-      <img src="{{ cal_obj.potato_image.url}}" alt="potato calibration" style="max-height:300px">
-      <img src="{{ cal_obj.flour_image.url}}" alt="flour calibration" style="max-height:300px">
-      <img src="{{ cal_obj.milk_image.url}}" alt="milk calibration" style="max-height:300px">
+      <p>{% translate "Email: " %}{{ email }}</p>
+      <img src="{{ cal_obj.calibration_image.url }}" alt="camera calibration" style="max-height:300px">
+      <img src="{{ cal_obj.potato_image.url }}" alt="potato calibration" style="max-height:300px">
+      <img src="{{ cal_obj.flour_image.url }}" alt="flour calibration" style="max-height:300px">
+      <img src="{{ cal_obj.milk_image.url }}" alt="milk calibration" style="max-height:300px">
     {% endif %}
   </body>
 </html>
