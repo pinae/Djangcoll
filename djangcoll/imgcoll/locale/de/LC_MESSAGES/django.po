@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-09 14:55+0100\n"
+"POT-Creation-Date: 2023-03-17 11:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,13 +26,29 @@ msgstr "E-Mail"
 msgid "Enter your email for updates."
 msgstr "Geben Sie Ihre E-Mail-Adresse für Updates an."
 
-#: imgcoll/models.py:11
+#: imgcoll/forms.py:10 imgcoll/models.py:11
 msgid "smartphone"
 msgstr "Smartphone"
 
-#: imgcoll/models.py:12
+#: imgcoll/forms.py:11 imgcoll/models.py:12
 msgid "manufacturer and name of your cell phone"
 msgstr "Hersteller und Modellbezeichnung des Smartphones"
+
+#: imgcoll/forms.py:13
+msgid "food_name"
+msgstr "Nahrungsmittel"
+
+#: imgcoll/forms.py:14 imgcoll/models.py:28
+msgid "name of the food to analyze"
+msgstr "Bezeichnung des zu analysierenden Nahrungsmittels"
+
+#: imgcoll/forms.py:16 imgcoll/models.py:34
+msgid "comment"
+msgstr "Kommentar"
+
+#: imgcoll/forms.py:17 imgcoll/models.py:35
+msgid "Let us know how to improve our service!"
+msgstr "Wie können wir die Software verbessern?"
 
 #: imgcoll/models.py:15
 msgid "calibration image"
@@ -54,21 +70,9 @@ msgstr "Foto von etwas Mehl"
 msgid "image of some milk"
 msgstr "Foto einer Milchpfütze"
 
-#: imgcoll/models.py:28
-msgid "name of the food to analyze"
-msgstr "Bezeichnung des zu analysierenden Nahrungsmittels"
-
 #: imgcoll/models.py:31
 msgid "image to analyze"
 msgstr "Bild des zu analysierenden Nahrungsmittels"
-
-#: imgcoll/models.py:34
-msgid "comment"
-msgstr "Kommentar"
-
-#: imgcoll/models.py:35
-msgid "Let us know how to improve our service!"
-msgstr "Wie können wir die Software verbessern?"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:13
 msgid "Food analyzer beta"
@@ -172,7 +176,7 @@ msgstr "Kalibrierungsbild:"
 msgid "Email: "
 msgstr "E-Mail: "
 
-#: imgcoll/views.py:21 imgcoll/views.py:64
+#: imgcoll/views.py:21 imgcoll/views.py:70
 msgid "ERROR: Request body was not valid JSON."
 msgstr "FEHLER: Die übertragenen Daten waren nicht im JSON-Format."
 
@@ -180,10 +184,10 @@ msgstr "FEHLER: Die übertragenen Daten waren nicht im JSON-Format."
 msgid "ERROR: You have to send a email address."
 msgstr "FEHLER: Sie müssen das Feld „email“ angeben."
 
-#: imgcoll/views.py:35 imgcoll/views.py:101
+#: imgcoll/views.py:35 imgcoll/views.py:107
 msgid "ERROR: Invalid request."
 msgstr "FEHLER: Falsches Anfrageformat."
 
-#: imgcoll/views.py:66
+#: imgcoll/views.py:72
 msgid "ERROR: You have to send a processing ID."
 msgstr "FEHLER: Sie müssen eine Datensatz-ID angeben."
