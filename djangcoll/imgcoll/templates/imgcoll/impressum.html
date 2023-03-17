@@ -1,13 +1,14 @@
+{% load i18n %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="de"><head>
-  <title>Impressum | c't Magazin</title>
-<meta charset="utf-8">
-<meta name="publisher" content="Heise Medien">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Impressum | c’t Testserver FAIGE</title>
   <meta name="title" content="Impressum">
-      <link rel="stylesheet" href="/static/imgcoll/styles.css" />
-    <link rel="stylesheet" href="/static/imgcoll/index.css" />
-      <link rel="icon" href="/static/imgcoll/favicon.svg" />
+  <link rel="icon" href="{% static 'imgcoll/favicon.svg' %}" />
+  <link rel="stylesheet" href="{% static 'imgcoll/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'imgcoll/index.css' %}" />
 </head>
 
 <body>
@@ -97,34 +98,17 @@ Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
       </div>
 </main>
 
-    
-
-
 <footer class="footer">
   <ul class="footer__list">
-      
-<li class="footer__item">
-        <a href="/" class="footer__link">
-          Startseite
-        </a>
-      </li>
-<li class="footer__item">
-        <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">
-          Datenschutz
-        </a>
-      </li>
-      <li class="footer__item">
-        <a href="/static/imgcoll/impressum.html" class="footer__link">
-          Impressum
-        </a>
-      </li>
-      <li class="footer__item">
-        <a href="https://www.heise-gruppe.de/artikel/Heise-Medien-3904998.html" class="footer__link">
-          Copyright © 2023 Heise Medien
-        </a>
-      </li>
-    
-
+    <li class="footer__item">
+        <a href="/" class="footer__link">Startseite</a>
+    </li>
+    <li class="footer__item">
+      <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">Datenschutz</a>
+    </li>
+    <li class="footer__item">
+      <a href="/impressum" class="footer__link">Impressum</a>
+    </li>
   </ul>
 </footer>
 

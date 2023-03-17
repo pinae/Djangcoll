@@ -61,6 +61,9 @@ def calibration_data_upload(request):
         'form': form
     })
 
+def impressum(request):
+    return render(request, 'imgcoll/impressum.html')
+
 
 def get_results(request):
     if request.method == 'POST':
