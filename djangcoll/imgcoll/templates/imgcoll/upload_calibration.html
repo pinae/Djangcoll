@@ -10,8 +10,9 @@
       <script src="{% static 'imgcoll/asynchronous.js' %}" async type="application/javascript"></script>
   </head>
   <body>
-      <h1>{% translate "Food analyzer beta" %}</h1>
+      <h1 id="title">{% translate "FAIGE" %}<sub>{% translate "beta" %}</sub></h1>
     {% if not cal_obj %}
+      <p>{% translate "Dies ist eine Testinstanz von FAIGE " %}</p>
       <p>{% translate "Please supply a mail address if you like to get notified if your data calibration gets updated. If you supply am mail adderss we will create an account for this address." %}</p>
       <p>{% translate "Please fill in the name of your cell phone model. This greatly helps to cluster the training data for different CMOS sensors. You can expect to get much better results if you supply the correct manufacturer and model of your device." %}</p>
       <p>{% translate "The first image should contain an empty plate. This image is used for camera calibration. The pictures of the potato slice, the flour and the milk are used for calibrating the near infrared raw data. Please be aware that poor lighting conditions for these pictures may greatly reduce the classification accuracy." %}</p>
@@ -44,11 +45,43 @@
         </div>
       </div>
       <h4>{% translate "Calibration data:" %}</h4>
-      <p>{% translate "Email: " %}{{ email }}</p>
+      
       <img src="{{ cal_obj.calibration_image.url }}" alt="camera calibration" style="max-height:300px">
       <img src="{{ cal_obj.potato_image.url }}" alt="potato calibration" style="max-height:300px">
       <img src="{{ cal_obj.flour_image.url }}" alt="flour calibration" style="max-height:300px">
       <img src="{{ cal_obj.milk_image.url }}" alt="milk calibration" style="max-height:300px">
+      
+      <p>{% translate "Email: " %}{{ email }}</p>
+      
     {% endif %}
+    <foo
   </body>
+  
+<footer class="footer">
+  <ul class="footer__list">
+      
+<li class="footer__item">
+        <a href="/" class="footer__link">
+          Startseite
+        </a>
+      </li>
+<li class="footer__item">
+        <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">
+          Datenschutz
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="{% static 'imgcoll/impressum.html' %}" class="footer__link">
+          Impressum
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="https://www.heise-gruppe.de/artikel/Heise-Medien-3904998.html" class="footer__link">
+          Copyright © 2023 Heise Medien
+        </a>
+      </li>
+    
+
+  </ul>
+</footer>
 </html>

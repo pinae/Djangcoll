@@ -11,7 +11,11 @@ body {
     border-radius: 0.35em;
     padding: 0.2em 1em;
 }
-
+#title {
+  color: darkblue;
+  font-size: 2.5em;
+  margin-bottom: 0px;
+}
 #UploadForm div {
     margin-bottom: 0.35em;
 }
@@ -60,3 +64,28 @@ body {
     padding: 0.2em;
     border: 1px solid black;
 }
+
+
+.footer {
+margin-top: 2em;
+ clear:both;
+ padding:1rem 1.5rem;
+ border-top:.0625rem solid #c7c7c7;
+ background:#fff;
+ position:relative;
+ display: block;
+}
+
+
+.footer__list {
+ justify-content: center;
+ margin: 0;
+ display: flex;
+ padding-left:0;
+ list-style:none
+}
+
+.footer__item {
+  margin-right: 1rem;
+}
+
