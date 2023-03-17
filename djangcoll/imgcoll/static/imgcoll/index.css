@@ -1,0 +1,83 @@
+.ct__main {
+ padding:.75rem 1.5rem 1.5rem
+}
+.container-fluid {
+ padding-right:.75rem;
+ padding-left:.75rem;
+ margin-right:auto;
+ margin-left:auto
+}
+.bx-wrapper {
+ position:relative;
+ margin-bottom:60px;
+ padding:0;
+ *zoom:1;
+ -ms-touch-action:pan-y;
+ touch-action:pan-y
+}
+dd,
+dt {
+ line-height:1.25
+}
+dt {
+ font-weight:700;
+}
+dd {
+ margin-left:0
+}
+
+#impressum {
+ margin-bottom:3em
+}
+#impressum address {
+ font-style:normal
+}
+#impressum address dl {
+ margin:0
+}
+#impressum address dl dd,
+#impressum address dl dt {
+ float:left;
+ margin-left:0
+}
+#impressum address dl dt {
+ font-weight:400;
+ clear:both;
+ width:4em
+}
+#impressum address .pf {
+ display:block;
+ margin:.25em 0
+}
+#impressum .verlagsinfo dt {
+ font-weight:700;
+}
+#impressum .verlagsinfo dd {
+ margin:0 0 1em
+}
+#impressum .verantwortlich {
+ margin-bottom:1em
+}
+#impressum .verantwortlich p {
+ margin:0
+}
+#impressum .abschluss,
+#impressum .redaktion {
+ margin-top:1.5em
+}
+#kontakt {
+ position:relative;
+ margin-bottom:1em
+}
+.cgroup:after,
+.cgroup:before {
+ display:table;
+ content:" "
+}
+.cgroup:after {
+ clear:both
+}
+
+h4 {
+ font-size: 1rem;
+}
