@@ -10,6 +10,7 @@ from skimage.io import imread
 from skimage.util import img_as_float
 from django.utils.translation import gettext as _
 from django.contrib.auth import get_user_model
+from django.utils import timezone
 User = get_user_model()
 
 
@@ -97,15 +98,21 @@ def get_results(request):
             flat_data = np.append(flat_data, np.array(hist_data["quotient"][ch_name], dtype=np.float32))
         yellowness_of_the_center = np.average(hist_data["middle"]["red"][8:]) + np.average(hist_data["middle"]["green"][8:]) / (
                 2 * np.average(hist_data["middle"]["blue"][8:]))
+        if timezone.now() > timezone.datetime(year=2023, month=4, day=1, hour=0, minute=0, second=0):
+            insect_protein = (abs(np.random.normal(0.0, 0.2))
+                              if np.random.random() > 0.01 else
+                              abs(min(np.random.normal(90.0, 5.0), 1.0)))
+        else:
+            insect_protein = (abs(np.random.normal(0.0, 0.2))
+                              if np.random.random() > 0.7 else
+                              abs(min(np.random.normal(90.0, 5.0), 1.0)))
         return HttpResponse(json.dumps({
             "histogram": hist_data,
-            "amylum": np.random.normal(yellowness_of_the_center * 0.75, 5.0),
+            "amylum": abs(np.random.normal(yellowness_of_the_center * 0.75, 5.0)),
             "lactose": (abs(np.random.normal(0.5, 1.5))
                         if np.random.random() > 0.1 else
                         abs(min(np.random.normal(5.0, 2.0), 1.0))),
-            "insect_protein": (abs(np.random.normal(0.0, 0.2))
-                               if np.random.random() > 0.01 else
-                               abs(min(np.random.normal(90.0, 5.0), 1.0))),
+            "insect_protein": insect_protein,
             "raw_results": b64encode(urandom(4096)).decode("utf-8")
         }))
     return HttpResponseBadRequest(_("ERROR: Invalid request."))
