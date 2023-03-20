@@ -74,19 +74,25 @@ msgstr "Foto einer Milchpfütze"
 msgid "image to analyze"
 msgstr "Bild des zu analysierenden Nahrungsmittels"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:13
-msgid "Food analyzer beta"
-msgstr "Nahrungs-Analysator BETA"
+#: imgcoll/templates/imgcoll/upload_calibration.html:19
+msgid "Food analyzer"
+msgstr "Nahrungsanalysator"
+
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:21
+msgid ""
+"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt."
+msgstr ""
+"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt."
+
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:15
 msgid ""
 "Please supply a mail address if you like to get notified if your data "
-"calibration gets updated. If you supply am mail adderss we will create an "
-"account for this address."
+"calibration gets updated."
 msgstr ""
 "Geben Sie eine E-Mail-Adresse an, damit wir Sie benachrichtigen können, wenn "
-"Ihre Kalibrierungsdaten ein Update bekommen. Wenn Sie eine E-Mail angeben, "
-"erstellen wir einen Account zu dieser Adresse."
+"Ihre Kalibrierungsdaten ein Update bekommen. Die Angabe der E-Mail ist freiwillig."
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:16
 msgid ""
@@ -103,13 +109,19 @@ msgstr ""
 #: imgcoll/templates/imgcoll/upload_calibration.html:17
 msgid ""
 "The first image should contain an empty plate. This image is used for camera "
-"calibration. The pictures of the potato slice, the flour and the milk are "
+"calibration."
+msgstr ""
+"Das erste Bild sollte einen leeren weißen Teller zeigen. Wir nutzen dieses "
+"Bild, um die Kamera und Linse zu kalibrieren."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:17
+msgid ""
+"The pictures of the potato slice, the flour and the milk are "
 "used for calibrating the near infrared raw data. Please be aware that poor "
 "lighting conditions for these pictures may greatly reduce the classification "
 "accuracy."
 msgstr ""
-"Das erste Bild sollte einen leeren weißen Teller zeigen. Wir nutzen dieses "
-"Bild, um die Kamera und Linse zu kalibrieren. Die Bilder von einer "
+"Die Bilder von einer "
 "Kartoffelscheibe, einem Mehl-Bett und von der Milchpfütze nutzen wir, um die "
 "Nahinfrarot-Anteile in den Rohdaten vom CMOS-Sensor zu kalibrieren. Bitte "
 "beachten Sie, dass ungenügende Lichtverhältnisse die "
@@ -119,14 +131,31 @@ msgstr ""
 msgid ""
 "Place the food you want to classify on the same plate as shown in the "
 "calibration image. Take a picture, upload it in the last field and supply a "
-"descriptive name to the food in the picture. Single ingredients work a bit "
-"more reliably than cooked dishes but you can upload either one."
+"descriptive name to the food in the picture."
 msgstr ""
 "Platzieren Sie das zu klassifizierende Nahrungsmittel auf einem gleichen "
 "Teller wie im Kalibrierungsbild. Schießen Sie dann das Foto und laden Sie es "
-"zusammen mit einer aussagekräftigen Beschreibung hoch. Einzelne Zutaten "
-"geben etwas bessere Ergebnisse; Sie können aber auch ganze Gerichte "
-"klassifizieren lassen."
+"zusammen mit einer aussagekräftigen Beschreibung hoch."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:27
+msgid "empty dish"
+msgstr "Leerer Teller"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:27
+msgid "folding meterstick next to it"
+msgstr "Leerer Teller, Zollstock daneben"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:35
+msgid "dish with potato"
+msgstr "Teller mit Kartoffel"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:38
+msgid "dish with flour"
+msgstr "Teller mit Mehl"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:41
+msgid "dish with milk"
+msgstr "Teller mit Milch"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:23
 msgid "Upload and analyze"
@@ -135,10 +164,6 @@ msgstr "Hochladen und Analysieren"
 #: imgcoll/templates/imgcoll/upload_calibration.html:27
 msgid "Succesfully uploaded: "
 msgstr "Erfolgreich hochgeladen: "
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:29
-msgid "Comment: "
-msgstr "Kommentar: "
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:32
 msgid "Your data is being processed..."
@@ -158,7 +183,7 @@ msgstr "Messwert"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:40
 msgid "amylum"
-msgstr "Stärkeprotein"
+msgstr "Stärke"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:41
 msgid "lactose"
@@ -170,11 +195,19 @@ msgstr "Insektenprotein"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:46
 msgid "Calibration data:"
-msgstr "Kalibrierungsbild:"
+msgstr "Kalibrierungsbilder:"
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:46
+msgid "Submitted data:"
+msgstr "Übermittelte Daten:"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:47
 msgid "Email: "
 msgstr "E-Mail: "
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:29
+msgid "Comment: "
+msgstr "Kommentar: "
 
 #: imgcoll/views.py:21 imgcoll/views.py:70
 msgid "ERROR: Request body was not valid JSON."

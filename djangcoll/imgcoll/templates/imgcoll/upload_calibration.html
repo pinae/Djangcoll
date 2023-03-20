@@ -5,18 +5,46 @@
   <head>
       <meta charset="utf-8" />
       <link rel="icon" href="{% static 'imgcoll/favicon.svg' %}" />
-      <title>Calibration upload | c’t Testserver FAIGE</title>
+    {% if not cal_obj %}
+      <title>{% translate "Photo upload" %} | c’t Testserver FAIGE</title>
+    {% endif %}
+    {% if cal_obj %}
+      <title>{% translate "Results" %} | c’t Testserver FAIGE</title>
+    {% endif %}
       <link rel="stylesheet" href="{% static 'imgcoll/styles.css' %}" />
       <script src="{% static 'imgcoll/asynchronous.js' %}" async type="application/javascript"></script>
   </head>
   <body>
-      <h1 id="title">{% translate "FAIGE" %}<sub>{% translate "beta" %}</sub></h1>
+      <h1 id="title">FAIGE<sub>beta</sub></h1>
+      <h2 id="subtitle">{% translate "Food analyzer" %}</h2>
     {% if not cal_obj %}
-      <p>{% translate "Dies ist eine Testinstanz von FAIGE " %}</p>
-      <p>{% translate "Please supply a mail address if you like to get notified if your data calibration gets updated. If you supply am mail adderss we will create an account for this address." %}</p>
+    {# !!! TODO Übersetzung: Neuer Absatz #}
+      <p>{% translate "Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt." %}</p>
+      {# !!! TODO Übersetzung Absatz aufgespalten #}
+      <p>{% translate "The first image should contain an empty plate. This image is used for camera calibration." %}</p>
+      <div class="pics">
+      {# !!! TODO Übersetzung Check Englisch #}
+        <img src="{% static 'imgcoll/leer.jpg' %}" 
+             alt="{% translate 'empty dish' %}, {% translate 'folding meterstick next to it' %}"
+        />
+      </div>
+       <p>{% translate "The pictures of the potato slice, the flour and the milk are used for calibrating the near infrared raw data. Please be aware that poor lighting conditions for these pictures may greatly reduce the classification accuracy." %}</p>
+      <div class="pics">
+            {# !!! TODO Übersetzung Check Englisch #}
+        <img src="{% static 'imgcoll/kartoffel.jpg' %}" 
+             alt="{% translate 'dish with potato' %}, {% translate 'folding meterstick next to it' %}"
+        />
+        <img src="{% static 'imgcoll/mehl.jpg' %}" 
+             alt="{% translate 'dish with flour' %}, {% translate 'folding meterstick next to it' %}"
+        />
+        <img src="{% static 'imgcoll/milch.jpg' %}" 
+             alt="{% translate 'dish with milk' %}, {% translate 'folding meterstick next to it' %}"
+        />
+      </div>
+      <p>{% translate "Place the food you want to classify on the same plate as shown in the calibration image. Take a picture, upload it in the last field and supply a descriptive name to the food in the picture." %}</p>
+      {# !!! TODO Übersetzung: engl. freiwillige Angabe E-Mail (siehe deutsch) #}
+      <p>{% translate "Please supply a mail address if you like to get notified if your data calibration gets updated. Die Angabe der E-Mail ist freiwillig." %}</p>
       <p>{% translate "Please fill in the name of your cell phone model. This greatly helps to cluster the training data for different CMOS sensors. You can expect to get much better results if you supply the correct manufacturer and model of your device." %}</p>
-      <p>{% translate "The first image should contain an empty plate. This image is used for camera calibration. The pictures of the potato slice, the flour and the milk are used for calibrating the near infrared raw data. Please be aware that poor lighting conditions for these pictures may greatly reduce the classification accuracy." %}</p>
-      <p>{% translate "Place the food you want to classify on the same plate as shown in the calibration image. Take a picture, upload it in the last field and supply a descriptive name to the food in the picture. Single ingredients work a bit more reliably than cooked dishes but you can upload either one." %}</p>
       <form method="post" enctype="multipart/form-data" id="UploadForm">
           {% csrf_token %}
           <div><label></label><div id="mailhint" class="hint" style="visibility: hidden;"></div></div>
@@ -27,7 +55,6 @@
     {% if cal_obj %}
       <h3>{% translate "Succesfully uploaded: " %}{{cal_obj.food_name}}</h3>
       <img src="{{ cal_obj.analyze_image.url}}" alt="analyzed image" style="max-height:500px">
-      <p>{% translate "Comment: " %}{{ cal_obj.comment }}</p>
       <div id="processing">
         <div id="wait_block">
           <h4>{% translate "Your data is being processed..." %}</h4>
@@ -51,6 +78,8 @@
       <img src="{{ cal_obj.flour_image.url }}" alt="flour calibration" style="max-height:300px">
       <img src="{{ cal_obj.milk_image.url }}" alt="milk calibration" style="max-height:300px">
       
+      <h4>{% translate "Submitted data:" %}</h4>
+      <p>{% translate "Comment: " %}{{ cal_obj.comment }}</p>
       <p>{% translate "Email: " %}{{ email }}</p>
       
     {% endif %}
