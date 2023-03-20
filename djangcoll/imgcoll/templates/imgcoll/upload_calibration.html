@@ -6,10 +6,10 @@
       <meta charset="utf-8" />
       <link rel="icon" href="{% static 'imgcoll/favicon.svg' %}" />
     {% if not cal_obj %}
-      <title>{% translate "Photo upload" %} | c’t Testserver FAIGE</title>
+      <title>{% translate "Photo upload" %} | {% translate "FAIGE project server" %}</title>
     {% endif %}
     {% if cal_obj %}
-      <title>{% translate "Results" %} | c’t Testserver FAIGE</title>
+      <title>{% translate "Results" %} | {% translate "FAIGE project server" %}</title>
     {% endif %}
       <link rel="stylesheet" href="{% static 'imgcoll/styles.css' %}" />
       <script src="{% static 'imgcoll/asynchronous.js' %}" async type="application/javascript"></script>
@@ -18,34 +18,29 @@
       <h1 id="title">FAIGE<sub>beta</sub></h1>
       <h2 id="subtitle">{% translate "Food analyzer" %}</h2>
     {% if not cal_obj %}
-    {# !!! TODO Übersetzung: Neuer Absatz #}
-      <p>{% translate "Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt. Lesen Sie die Hintergründe in " %}
-      <a href="https://select.heise.de/ct/2023/8/seite-40" target="_blank">c’t 8/2023</a>.
+      <p>{% translate "This is a beta installation of FAIGE (Foodscan Artificial Intelligence Generic Entry). This software uses artificial intelligence (AI) to analyze food on a melecular level. It currently detects amylum, lactose and insect protein. for further information read the article in " %}
+      <a href="https://select.heise.de/ct/2023/8/seite-40" target="_blank">c’t 8/2023</a>{% translate " (german)." %}
       </p>
-      {# !!! TODO Übersetzung Absatz aufgespalten #}
       <p>{% translate "The first image should contain an empty plate. This image is used for camera calibration." %}</p>
       <div class="pics">
-      {# !!! TODO Übersetzung Check Englisch #}
         <img src="{% static 'imgcoll/leer.jpg' %}" 
-             alt="{% translate 'empty dish' %}, {% translate 'folding meterstick next to it' %}"
+             alt="{% translate 'empty dish' %}, {% translate 'folding rule next to it' %}"
         />
       </div>
        <p>{% translate "The pictures of the potato slice, the flour and the milk are used for calibrating the near infrared raw data. Please be aware that poor lighting conditions for these pictures may greatly reduce the classification accuracy." %}</p>
       <div class="pics">
-            {# !!! TODO Übersetzung Check Englisch #}
         <img src="{% static 'imgcoll/kartoffel.jpg' %}" 
-             alt="{% translate 'dish with potato' %}, {% translate 'folding meterstick next to it' %}"
+             alt="{% translate 'dish with potato' %}, {% translate 'folding rule next to it' %}"
         />
         <img src="{% static 'imgcoll/mehl.jpg' %}" 
-             alt="{% translate 'dish with flour' %}, {% translate 'folding meterstick next to it' %}"
+             alt="{% translate 'dish with flour' %}, {% translate 'folding rule next to it' %}"
         />
         <img src="{% static 'imgcoll/milch.jpg' %}" 
-             alt="{% translate 'dish with milk' %}, {% translate 'folding meterstick next to it' %}"
+             alt="{% translate 'dish with milk' %}, {% translate 'folding rule next to it' %}"
         />
       </div>
       <p>{% translate "Place the food you want to classify on the same plate as shown in the calibration image. Take a picture, upload it in the last field and supply a descriptive name to the food in the picture." %}</p>
-      {# !!! TODO Übersetzung: engl. freiwillige Angabe E-Mail (siehe deutsch) #}
-      <p>{% translate "Please supply a mail address if you like to get notified if your data calibration gets updated. Die Angabe der E-Mail ist freiwillig." %}</p>
+      <p>{% translate "Please supply a mail address (optional) if you like to get notified if your data calibration gets updated." %}</p>
       <p>{% translate "Please fill in the name of your cell phone model. This greatly helps to cluster the training data for different CMOS sensors. You can expect to get much better results if you supply the correct manufacturer and model of your device." %}</p>
       <form method="post" enctype="multipart/form-data" id="UploadForm">
           {% csrf_token %}
@@ -76,32 +71,27 @@
       </div>
       <h4>{% translate "Calibration data:" %}</h4>
       
-      <img src="{{ cal_obj.calibration_image.url }}" alt="camera calibration" style="max-height:300px">
-      <img src="{{ cal_obj.potato_image.url }}" alt="potato calibration" style="max-height:300px">
-      <img src="{{ cal_obj.flour_image.url }}" alt="flour calibration" style="max-height:300px">
-      <img src="{{ cal_obj.milk_image.url }}" alt="milk calibration" style="max-height:300px">
+      <img src="{{ cal_obj.calibration_image.url }}" alt="camera calibration" class="calibration_check">
+      <img src="{{ cal_obj.potato_image.url }}" alt="potato calibration" class="calibration_check">
+      <img src="{{ cal_obj.flour_image.url }}" alt="flour calibration" class="calibration_check">
+      <img src="{{ cal_obj.milk_image.url }}" alt="milk calibration" class="calibration_check">
       
       <h4>{% translate "Submitted data:" %}</h4>
       <p>{% translate "Comment: " %}{{ cal_obj.comment }}</p>
       <p>{% translate "Email: " %}{{ email }}</p>
-      
     {% endif %}
-    <foo
-  </body>
-  
-<footer class="footer">
-  <ul class="footer__list">
-    <li class="footer__item">
-        <a href="/" class="footer__link">Startseite</a>
-    </li>
-    <li class="footer__item">
-      <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">Datenschutz</a>
-    </li>
-    <li class="footer__item">
-      <a href="/impressum" class="footer__link">Impressum</a>
-    </li>
-  </ul>
-</footer>
-
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+            <a href="/" class="footer__link">{% translate "image upload and processing" %}</a>
+        </li>
+        <li class="footer__item">
+          <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">{% translate "data privacy" %}</a>
+        </li>
+        <li class="footer__item">
+          <a href="/impressum" class="footer__link">{% translate "imprint" %}</a>
+        </li>
+      </ul>
+    </footer>
 </body>
 </html>

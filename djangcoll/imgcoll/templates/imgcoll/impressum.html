@@ -3,113 +3,135 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <title>Impressum | c’t Testserver FAIGE</title>
-  <meta name="title" content="Impressum">
-  <link rel="icon" href="{% static 'imgcoll/favicon.svg' %}" />
-  <link rel="stylesheet" href="{% static 'imgcoll/styles.css' %}" />
-  <link rel="stylesheet" href="{% static 'imgcoll/index.css' %}" />
+    <meta charset="utf-8">
+    <title>{% translate "Imprint" %} | {% translate "FAIGE project server" %}</title>
+    <meta name="title" content="{% translate "Imprint" %}">
+    <link rel="icon" href="{% static 'imgcoll/favicon.svg' %}"/>
+    <link rel="stylesheet" href="{% static 'imgcoll/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'imgcoll/index.css' %}"/>
 </head>
 
 <body>
 
-  <main class="ct__main container-fluid">
+<main class="ct__main container-fluid">
     <div id="mitte_links">
-      <section id="impressum">
-              <h1>Impressum</h1>
-          
-          <p><strong>Verantwortlich für dieses Angebot gemäß § 5 TMG / § 18 MStV:</strong></p>
-          <address>
-              <strong>Heise Medien GmbH &amp; Co. KG</strong><br>
-              Karl-Wiechert-Allee 10<br>
-              30625 Hannover<br>
-              <span class="pf">
+        <section id="imprint">
+            <h1>{% translate "Imprint" %}</h1>
+
+            <p><strong>{% translate "Responsible for this page (german law § 5 TMG / § 18 MStV):" %}</strong></p>
+            <address>
+                <strong>Heise Medien GmbH &amp; Co. KG</strong><br>
+                Karl-Wiechert-Allee 10<br>
+                30625 Hannover<br>
+                <span class="pf">
                   Postfach 61 04 07<br>
                   30604 Hannover
               </span>
-              <dl class="clearfix cgroup">
-                  <dt>Telefon</dt><dd>+49 [0]511 5352-0</dd>
-                  <dt>Fax</dt><dd>+49 [0]511 5352-129</dd>
-                  <dt>E-Mail</dt><dd><a href="mailto:webmaster@heise.de">webmaster@heise.de</a></dd>
-              </dl>
-          </address>
-          <dl class="verlagsinfo clearfix cgroup">
-                  <dt>Persönlich haftende Gesellschafterin:</dt>
-                  <dd>Heise Medien Geschäftsführung GmbH<br>
-Amtsgericht Hannover HRB 60405</dd>
-                  <dt>Geschäftsführung:</dt>
-                  <dd>Ansgar Heise, Beate Gerold</dd>
-                  <dt>Mitglieder der Geschäftsleitung:</dt>
-                  <dd>Jörg Mühle, Falko Ossmann</dd>
-                  <dt>Herausgeber:</dt>
-                  <dd>Christian Heise, Ansgar Heise, Christian Persson</dd>
-                  <dt>Handelsregistereintrag:</dt>
-                  <dd>Amtsgericht Hannover HRA 26709</dd>
-                  <dt>Umsatzsteueridentifikationsnummer:</dt>
-                  <dd>DE 813 501 887</dd>
-          </dl>
-              <div class="verantwortlich">
-                  <p><strong>Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV:</strong></p>
-                  <p>Dr. Jürgen Rink<br>Karl-Wiechert-Allee 10<br>30625 Hannover<br>Tel.: +49 511 5352-0<br>Fax: +49 511 5352-129<br> <a href="mailto:jr@ct.de">jr@ct.de</a> </p>
-              </div>
-              <div class="redaktion">
-                  <h2>Redaktion c't</h2>
-<p>Tel.: +49 [0]511/5352-300<br>Fax: +49 [0]511/5352-417</p>
-<p><strong>Redaktionsassistenz:</strong><br><a href="mailto:suc@heise.de">Susanne Cölle</a><br><a href="mailto:cht@ct.de">Christopher Tränkmann</a><br><a href="mailto:mat@ct.de">Martin Triadan</a></p>
-<p><strong>Chefredakteur c't:</strong><br>Dr. Jürgen Rink (<a href="mailto:jr@ct.de">jr</a>)</p>
-<p><strong>Stellvertretender Chefredakteur:<br></strong>Axel Kossel (<a href="mailto:ad@ct.de">ad</a>)</p>
-<p><strong>Chef vom Dienst:</strong><br>Georg Schnurer (<a href="mailto:gs@ct.de">gs</a>)</p>
-<p><strong>c't online:</strong><br>Ulrike Kuhlmann (<a href="mailto:uk@heise.de">uk</a>) (Ltg.) </p>
-<p><a href="https://www.heise.de/ct/autoren/">Alle Redakteure</a></p>
-              </div>
-          <div class="abschluss">
-              <h2>IT-Team</h2>
-<p><strong>Leiter Web-Entwicklung<br></strong>Sebastian Hilbig</p>
-<p><strong>Head of Operations</strong><br>Silke Walter</p>
-<p><strong>Product Owner</strong><br>Dennis Bertram<br>Bettina Kröger<br>Christina Schoffer<br>Franziska Zorn</p>
-<p><strong>DevOps</strong><br>Christian Stritzke</p>
-<p><strong>UI/UX Design</strong><br>Manuela Bohn</p>
-<p><strong>Assistenz</strong><br>Michael Tesmer</p>
-<p><strong>Entwickler:innen</strong><br>Philipp Busse<br>Benjamin Deutsch<br>Pascal Fischer<br>Stephen Fischer<br>Nicole Franke<br>Sandra Groth<br>Jan Hofmann<br>Hilko Holweg<br>Steven Kowalzik<br>Erich Kramer<br>Stephan Niewerth<br>Sebastian Richter<br>Joachim Schlesener<br>Mandy Schwarze<br>Deniz Sesli<br>Dennis Stosberg<br>Silke Walter<br>Klara Diemert (Auszubildende)<br>Falk Rismansanj (Auszubildender)</p>
-<p><strong>IT-Systemmanagement</strong><br>Eckebrecht von Pappenheim (Ltg.)<br>Aiko Barz<br>Dirk Hartmann<br>Michael Fischer v. Mollard<br>Dr. Frank Ullrich</p>
-<p><strong>Heise Medien Produktion</strong><br>Christine Kreye (Ltg.)<br>Melanie Becker<br>Pascal Wissner<br>Martin Kreft<br>Kevin Harte<br>Thomas Kaltschmidt<br>Thomas Masur<br>Kai Wasserbäch</p>
-<h3 class="subheading"><strong>Daten- und Jugendschutzbeauftragter</strong><br> </h3>
-<p>Joerg Heidrich </p>
-<p>Ein Unternehmen der <a href="https://www.heise-gruppe.de/" target="_blank" rel="external noopener">Heise Gruppe</a>.</p>
-<p>Alle Rechte vorbehalten. Jegliche Vervielfältigung oder 
-Weiterverbreitung in jedem Medium als Ganzes oder in Teilen bedarf der 
-schriftlichen Zustimmung des Verlags. </p>
-<p><strong>Haftungshinweis:</strong> Trotz sorgfältiger inhaltlicher 
-Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. 
-Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
- verantwortlich.</p>
-<p><strong>Rechtlicher Hinweis:</strong> Die EU hat ein Online-Verfahren
- zur Beilegung von Streitigkeiten zwischen Unternehmern und Verbrauchern
- geschaffen. Informationen dazu finden Sie unter <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="external noopener">https://ec.europa.eu/consumers/odr/</a></p>
-<p>Die Heise Medien GmbH &amp; Co. KG<span class="apple-converted-space"> </span>beteiligt sich nicht an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.</p>
-<p></p>
-<p></p>
-              <p>Es gilt die <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html">Datenschutzerklärung</a> der Heise Medien GmbH &amp; Co. KG.</p>
-             
-          </div>
-      </section>
-      
-  
-      </div>
+                <dl class="clearfix cgroup">
+                    <dt>Telefon</dt>
+                    <dd>+49 [0]511 5352-0</dd>
+                    <dt>Fax</dt>
+                    <dd>+49 [0]511 5352-129</dd>
+                    <dt>E-Mail</dt>
+                    <dd><a href="mailto:webmaster@heise.de">webmaster@heise.de</a></dd>
+                </dl>
+            </address>
+            <dl class="verlagsinfo clearfix cgroup">
+                <dt>Persönlich haftende Gesellschafterin:</dt>
+                <dd>Heise Medien Geschäftsführung GmbH<br>
+                    Amtsgericht Hannover HRB 60405
+                </dd>
+                <dt>Geschäftsführung:</dt>
+                <dd>Ansgar Heise, Beate Gerold</dd>
+                <dt>Mitglieder der Geschäftsleitung:</dt>
+                <dd>Jörg Mühle, Falko Ossmann</dd>
+                <dt>Herausgeber:</dt>
+                <dd>Christian Heise, Ansgar Heise, Christian Persson</dd>
+                <dt>Handelsregistereintrag:</dt>
+                <dd>Amtsgericht Hannover HRA 26709</dd>
+                <dt>Umsatzsteueridentifikationsnummer:</dt>
+                <dd>DE 813 501 887</dd>
+            </dl>
+            <div class="verantwortlich">
+                <p><strong>{% translate "Responsible for the content according to german law § 18 Abs. 2 MStV:" %}</strong></p>
+                <p>Dr. Jürgen Rink<br>Karl-Wiechert-Allee 10<br>30625 Hannover<br>Tel.: +49 511 5352-0<br>Fax: +49 511
+                    5352-129<br> <a href="mailto:jr@ct.de">jr@ct.de</a></p>
+            </div>
+            <div class="redaktion">
+                <h2>Redaktion c't</h2>
+                <p>Tel.: +49 [0]511/5352-300<br>Fax: +49 [0]511/5352-417</p>
+                <p><strong>Redaktionsassistenz:</strong><br><a href="mailto:suc@heise.de">Susanne Cölle</a><br><a
+                        href="mailto:cht@ct.de">Christopher Tränkmann</a><br><a href="mailto:mat@ct.de">Martin
+                    Triadan</a></p>
+                <p><strong>Chefredakteur c't:</strong><br>Dr. Jürgen Rink (<a href="mailto:jr@ct.de">jr</a>)</p>
+                <p><strong>Stellvertretender Chefredakteur:<br></strong>Axel Kossel (<a href="mailto:ad@ct.de">ad</a>)
+                </p>
+                <p><strong>Chef vom Dienst:</strong><br>Georg Schnurer (<a href="mailto:gs@ct.de">gs</a>)</p>
+                <p><strong>c't online:</strong><br>Ulrike Kuhlmann (<a href="mailto:uk@heise.de">uk</a>) (Ltg.) </p>
+                <p><a href="https://www.heise.de/ct/autoren/">Alle Redakteure</a></p>
+            </div>
+            <div class="abschluss">
+                <h2>IT-Team</h2>
+                <p><strong>Leiter Web-Entwicklung<br></strong>Sebastian Hilbig</p>
+                <p><strong>Head of Operations</strong><br>Silke Walter</p>
+                <p><strong>Product Owner</strong><br>Dennis Bertram<br>Bettina Kröger<br>Christina Schoffer<br>Franziska
+                    Zorn</p>
+                <p><strong>DevOps</strong><br>Christian Stritzke</p>
+                <p><strong>UI/UX Design</strong><br>Manuela Bohn</p>
+                <p><strong>Assistenz</strong><br>Michael Tesmer</p>
+                <p><strong>Entwickler:innen</strong><br>Philipp Busse<br>Benjamin Deutsch<br>Pascal Fischer<br>Stephen
+                    Fischer<br>Nicole Franke<br>Sandra Groth<br>Jan Hofmann<br>Hilko Holweg<br>Steven Kowalzik<br>Erich
+                    Kramer<br>Stephan Niewerth<br>Sebastian Richter<br>Joachim Schlesener<br>Mandy Schwarze<br>Deniz
+                    Sesli<br>Dennis Stosberg<br>Silke Walter<br>Klara Diemert (Auszubildende)<br>Falk Rismansanj
+                    (Auszubildender)</p>
+                <p><strong>IT-Systemmanagement</strong><br>Eckebrecht von Pappenheim (Ltg.)<br>Aiko Barz<br>Dirk
+                    Hartmann<br>Michael Fischer v. Mollard<br>Dr. Frank Ullrich</p>
+                <p><strong>Heise Medien Produktion</strong><br>Christine Kreye (Ltg.)<br>Melanie Becker<br>Pascal
+                    Wissner<br>Martin Kreft<br>Kevin Harte<br>Thomas Kaltschmidt<br>Thomas Masur<br>Kai Wasserbäch</p>
+                <h3 class="subheading"><strong>Daten- und Jugendschutzbeauftragter</strong><br></h3>
+                <p>Joerg Heidrich </p>
+                <p>Ein Unternehmen der <a href="https://www.heise-gruppe.de/" target="_blank" rel="external noopener">Heise
+                    Gruppe</a>.</p>
+                <p>Alle Rechte vorbehalten. Jegliche Vervielfältigung oder
+                    Weiterverbreitung in jedem Medium als Ganzes oder in Teilen bedarf der
+                    schriftlichen Zustimmung des Verlags. </p>
+                <p><strong>Haftungshinweis:</strong> Trotz sorgfältiger inhaltlicher
+                    Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+                    Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
+                    verantwortlich.</p>
+                <p><strong>Rechtlicher Hinweis:</strong> Die EU hat ein Online-Verfahren
+                    zur Beilegung von Streitigkeiten zwischen Unternehmern und Verbrauchern
+                    geschaffen. Informationen dazu finden Sie unter
+                    <a href="https://ec.europa.eu/consumers/odr/"
+                       target="_blank" rel="external noopener">https://ec.europa.eu/consumers/odr/</a>
+                </p>
+                <p>Die Heise Medien GmbH &amp; Co. KG<span class="apple-converted-space"> </span>beteiligt sich nicht an
+                    einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.</p>
+                <p></p>
+                <p></p>
+                <p>Es gilt die
+                    <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html">
+                        Datenschutzerklärung</a>
+                    der Heise Medien GmbH &amp; Co. KG.
+                </p>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer class="footer">
-  <ul class="footer__list">
-    <li class="footer__item">
-        <a href="/" class="footer__link">Startseite</a>
-    </li>
-    <li class="footer__item">
-      <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html" class="footer__link">Datenschutz</a>
-    </li>
-    <li class="footer__item">
-      <a href="/impressum" class="footer__link">Impressum</a>
-    </li>
-  </ul>
+    <ul class="footer__list">
+        <li class="footer__item">
+            <a href="/" class="footer__link">{% translate "image upload and processing" %}</a>
+        </li>
+        <li class="footer__item">
+            <a href="https://www.heise.de/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html"
+               class="footer__link">{% translate "data privacy" %}</a>
+        </li>
+        <li class="footer__item">
+            <a href="/impressum" class="footer__link">{% translate "imprint" %}</a>
+        </li>
+    </ul>
 </footer>
 
 </body>

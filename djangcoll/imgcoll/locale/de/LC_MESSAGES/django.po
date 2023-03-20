@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-17 11:22+0100\n"
+"POT-Creation-Date: 2023-03-20 12:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,83 +18,195 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: imgcoll/forms.py:7
+#: djangcoll/imgcoll/forms.py:7
 msgid "email"
 msgstr "E-Mail"
 
-#: imgcoll/forms.py:8
-msgid "Enter your email for updates."
+#: djangcoll/imgcoll/forms.py:8
+msgid "Enter your email for updates. (Optional)"
 msgstr "Geben Sie Ihre E-Mail-Adresse für Updates an."
 
-#: imgcoll/forms.py:10 imgcoll/models.py:11
+#: djangcoll/imgcoll/forms.py:10 djangcoll/imgcoll/models.py:11
 msgid "smartphone"
 msgstr "Smartphone"
 
-#: imgcoll/forms.py:11 imgcoll/models.py:12
-msgid "manufacturer and name of your cell phone"
+#: djangcoll/imgcoll/forms.py:11
+msgid "Manufacturer and name of your cell phone. (Optional)"
 msgstr "Hersteller und Modellbezeichnung des Smartphones"
 
-#: imgcoll/forms.py:13
+#: djangcoll/imgcoll/forms.py:13
 msgid "food_name"
 msgstr "Nahrungsmittel"
 
-#: imgcoll/forms.py:14 imgcoll/models.py:28
-msgid "name of the food to analyze"
+#: djangcoll/imgcoll/forms.py:14
+msgid "Name of the food to analyze."
 msgstr "Bezeichnung des zu analysierenden Nahrungsmittels"
 
-#: imgcoll/forms.py:16 imgcoll/models.py:34
+#: djangcoll/imgcoll/forms.py:16 djangcoll/imgcoll/models.py:34
 msgid "comment"
 msgstr "Kommentar"
 
-#: imgcoll/forms.py:17 imgcoll/models.py:35
-msgid "Let us know how to improve our service!"
+#: djangcoll/imgcoll/forms.py:17 djangcoll/imgcoll/models.py:35
+msgid "Let us know how to improve our service! (Optional)"
 msgstr "Wie können wir die Software verbessern?"
 
-#: imgcoll/models.py:15
+#: djangcoll/imgcoll/models.py:12
+msgid "Manufacturer and name of your cell phone"
+msgstr "Hersteller und Modellbezeichnung des Smartphones"
+
+#: djangcoll/imgcoll/models.py:15
 msgid "calibration image"
 msgstr "Kalibrierungsbild"
 
-#: imgcoll/models.py:16
-msgid "image of an empty plate for calibration"
+#: djangcoll/imgcoll/models.py:16
+msgid "Image of an empty plate for calibration"
 msgstr "Kalibrierungsbild von einem leeren Teller"
 
-#: imgcoll/models.py:19
-msgid "image of a potato slice"
+#: djangcoll/imgcoll/models.py:19
+msgid "Image of a potato slice"
 msgstr "Foto einer Kartoffelscheibe"
 
-#: imgcoll/models.py:22
-msgid "image of some flour"
+#: djangcoll/imgcoll/models.py:22
+msgid "Image of some flour"
 msgstr "Foto von etwas Mehl"
 
-#: imgcoll/models.py:25
-msgid "image of some milk"
+#: djangcoll/imgcoll/models.py:25
+msgid "Image of some milk"
 msgstr "Foto einer Milchpfütze"
 
-#: imgcoll/models.py:31
-msgid "image to analyze"
+#: djangcoll/imgcoll/models.py:28
+msgid "Name of the food to analyze"
+msgstr "Bezeichnung des zu analysierenden Nahrungsmittels"
+
+#: djangcoll/imgcoll/models.py:31
+msgid "Food image to analyze"
 msgstr "Bild des zu analysierenden Nahrungsmittels"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:19
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:7
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:8
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:19
+msgid "Imprint"
+msgstr "Impressum"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:7
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:9
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:12
+msgid "FAIGE project server"
+msgstr "c’t Testserver FAIGE"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:21
+msgid "Responsible for this page (german law § 5 TMG / § 18 MStV):"
+msgstr "Verantwortlich für dieses Angebot gemäß § 5 TMG / § 18 MStV:"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:56
+msgid "Responsible for the content according to german law § 18 Abs. 2 MStV:"
+msgstr "Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV:"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:125
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:86
+msgid "image upload and processing"
+msgstr "Bilder-Upload und Analyse"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:129
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:89
+msgid "data privacy"
+msgstr "Datenschutz"
+
+#: djangcoll/imgcoll/templates/imgcoll/impressum.html:132
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:92
+msgid "imprint"
+msgstr "Impressum"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:9
+msgid "Photo upload"
+msgstr "Photo Upload & Analyse"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:12
+msgid "Results"
+msgstr "Analyseergebnisse"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:19
 msgid "Food analyzer"
 msgstr "Nahrungsanalysator"
 
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:21
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:21
 msgid ""
-"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt.  Lesen Sie die Hintergründe in "
+"This is a beta installation of FAIGE (Foodscan Artificial Intelligence "
+"Generic Entry). This software uses artificial intelligence (AI) to analyze "
+"food on a melecular level. It currently detects amylum, lactose and insect "
+"protein. for further information read the article in "
 msgstr ""
-"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt. Lesen Sie die Hintergründe in "
+"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence "
+"Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. "
+"Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und "
+"Insektenprotein beschränkt. Lesen Sie die Hintergründe in"
 
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:22
+msgid " (german)."
+msgstr "."
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:15
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:24
 msgid ""
-"Please supply a mail address if you like to get notified if your data "
-"calibration gets updated."
+"The first image should contain an empty plate. This image is used for camera "
+"calibration."
+msgstr ""
+"Das erste Bild sollte einen leeren weißen Teller zeigen. Wir nutzen dieses "
+"Bild, um die Kamera und Linse zu kalibrieren."
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:27
+msgid "empty dish"
+msgstr "Leerer Teller"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:27
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:33
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:36
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:39
+msgid "folding rule next to it"
+msgstr "Leerer Teller, Zollstock daneben"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:30
+msgid ""
+"The pictures of the potato slice, the flour and the milk are used for "
+"calibrating the near infrared raw data. Please be aware that poor lighting "
+"conditions for these pictures may greatly reduce the classification accuracy."
+msgstr ""
+"Die Bilder von einer Kartoffelscheibe, einem Mehl-Bett und von der "
+"Milchpfütze nutzen wir, um die Nahinfrarot-Anteile in den Rohdaten vom CMOS-"
+"Sensor zu kalibrieren. Bitte beachten Sie, dass ungenügende "
+"Lichtverhältnisse die Klassifizierungsgenauigkeit stark beeinträchtigen."
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:33
+msgid "dish with potato"
+msgstr "Teller mit Kartoffel"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:36
+msgid "dish with flour"
+msgstr "Teller mit Mehl"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:39
+msgid "dish with milk"
+msgstr "Teller mit Milch"
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:42
+msgid ""
+"Place the food you want to classify on the same plate as shown in the "
+"calibration image. Take a picture, upload it in the last field and supply a "
+"descriptive name to the food in the picture."
+msgstr ""
+"Platzieren Sie das zu klassifizierende Nahrungsmittel auf einem gleichen "
+"Teller wie im Kalibrierungsbild. Schießen Sie dann das Foto und laden Sie es "
+"zusammen mit einer aussagekräftigen Beschreibung hoch."
+
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:43
+msgid ""
+"Please supply a mail address (optional) if you like to get notified if your "
+"data calibration gets updated."
 msgstr ""
 "Geben Sie eine E-Mail-Adresse an, damit wir Sie benachrichtigen können, wenn "
-"Ihre Kalibrierungsdaten ein Update bekommen. Die Angabe der E-Mail ist freiwillig."
+"Ihre Kalibrierungsdaten ein Update bekommen. Die Angabe der E-Mail ist "
+"freiwillig."
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:16
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:44
 msgid ""
 "Please fill in the name of your cell phone model. This greatly helps to "
 "cluster the training data for different CMOS sensors. You can expect to get "
@@ -106,125 +218,74 @@ msgstr ""
 "verschiedene CMOS-Sensoren zu clustern. Mit einer korrekten Angabe bekommen "
 "Sie im Allgemeinen bessere Ergebnisse."
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:17
-msgid ""
-"The first image should contain an empty plate. This image is used for camera "
-"calibration."
-msgstr ""
-"Das erste Bild sollte einen leeren weißen Teller zeigen. Wir nutzen dieses "
-"Bild, um die Kamera und Linse zu kalibrieren."
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:17
-msgid ""
-"The pictures of the potato slice, the flour and the milk are "
-"used for calibrating the near infrared raw data. Please be aware that poor "
-"lighting conditions for these pictures may greatly reduce the classification "
-"accuracy."
-msgstr ""
-"Die Bilder von einer "
-"Kartoffelscheibe, einem Mehl-Bett und von der Milchpfütze nutzen wir, um die "
-"Nahinfrarot-Anteile in den Rohdaten vom CMOS-Sensor zu kalibrieren. Bitte "
-"beachten Sie, dass ungenügende Lichtverhältnisse die "
-"Klassifizierungsgenauigkeit stark beeinträchtigen."
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:18
-msgid ""
-"Place the food you want to classify on the same plate as shown in the "
-"calibration image. Take a picture, upload it in the last field and supply a "
-"descriptive name to the food in the picture."
-msgstr ""
-"Platzieren Sie das zu klassifizierende Nahrungsmittel auf einem gleichen "
-"Teller wie im Kalibrierungsbild. Schießen Sie dann das Foto und laden Sie es "
-"zusammen mit einer aussagekräftigen Beschreibung hoch."
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:27
-msgid "empty dish"
-msgstr "Leerer Teller"
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:27
-msgid "folding meterstick next to it"
-msgstr "Leerer Teller, Zollstock daneben"
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:35
-msgid "dish with potato"
-msgstr "Teller mit Kartoffel"
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:38
-msgid "dish with flour"
-msgstr "Teller mit Mehl"
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:41
-msgid "dish with milk"
-msgstr "Teller mit Milch"
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:23
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:49
 msgid "Upload and analyze"
 msgstr "Hochladen und Analysieren"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:27
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:53
 msgid "Succesfully uploaded: "
 msgstr "Erfolgreich hochgeladen: "
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:32
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:57
 msgid "Your data is being processed..."
 msgstr "Ihre Daten werden verarbeitet. Bitte Warten..."
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:33
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:58
 msgid "processing..."
 msgstr "Verarbeitung läuft..."
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:46
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:63
 msgid "Results:"
 msgstr "Ergebnisse:"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:39
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:65
 msgid "measured parameter"
 msgstr "Messgröße"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:39
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:65
 msgid "measured value"
 msgstr "Messwert"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:40
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:66
 msgid "amylum"
 msgstr "Stärke"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:41
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:67
 msgid "lactose"
 msgstr "Laktosegehalt"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:42
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:68
 msgid "insect protein"
 msgstr "Insektenprotein"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:46
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:72
 msgid "Calibration data:"
 msgstr "Kalibrierungsbilder:"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:46
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:79
 msgid "Submitted data:"
 msgstr "Übermittelte Daten:"
 
-#: imgcoll/templates/imgcoll/upload_calibration.html:47
-msgid "Email: "
-msgstr "E-Mail: "
-
-#: imgcoll/templates/imgcoll/upload_calibration.html:29
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:80
 msgid "Comment: "
 msgstr "Kommentar: "
 
-#: imgcoll/views.py:21 imgcoll/views.py:70
+#: djangcoll/imgcoll/templates/imgcoll/upload_calibration.html:81
+msgid "Email: "
+msgstr "E-Mail: "
+
+#: djangcoll/imgcoll/views.py:21 djangcoll/imgcoll/views.py:74
 msgid "ERROR: Request body was not valid JSON."
 msgstr "FEHLER: Die übertragenen Daten waren nicht im JSON-Format."
 
-#: imgcoll/views.py:23
+#: djangcoll/imgcoll/views.py:23
 msgid "ERROR: You have to send a email address."
 msgstr "FEHLER: Sie müssen das Feld „email“ angeben."
 
-#: imgcoll/views.py:35 imgcoll/views.py:107
+#: djangcoll/imgcoll/views.py:35 djangcoll/imgcoll/views.py:111
 msgid "ERROR: Invalid request."
 msgstr "FEHLER: Falsches Anfrageformat."
 
-#: imgcoll/views.py:72
+#: djangcoll/imgcoll/views.py:76
 msgid "ERROR: You have to send a processing ID."
 msgstr "FEHLER: Sie müssen eine Datensatz-ID angeben."

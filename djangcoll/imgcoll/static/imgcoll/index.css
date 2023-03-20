@@ -1,83 +1,100 @@
 .ct__main {
- padding:.75rem 1.5rem 1.5rem
-}
-.container-fluid {
- padding-right:.75rem;
- padding-left:.75rem;
- margin-right:auto;
- margin-left:auto
-}
-.bx-wrapper {
- position:relative;
- margin-bottom:60px;
- padding:0;
- *zoom:1;
- -ms-touch-action:pan-y;
- touch-action:pan-y
-}
-dd,
-dt {
- line-height:1.25
-}
-dt {
- font-weight:700;
-}
-dd {
- margin-left:0
+    padding: .75rem 1.5rem 1.5rem
 }
 
-#impressum {
- margin-bottom:3em
+.container-fluid {
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto
 }
-#impressum address {
- font-style:normal
+
+.bx-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 0;
+    *zoom: 1;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y
 }
-#impressum address dl {
- margin:0
+
+dd, dt {
+    line-height: 1.25
 }
-#impressum address dl dd,
-#impressum address dl dt {
- float:left;
- margin-left:0
+
+dt {
+    font-weight: 700;
 }
-#impressum address dl dt {
- font-weight:400;
- clear:both;
- width:4em
+
+dd {
+    margin-left: 0
 }
-#impressum address .pf {
- display:block;
- margin:.25em 0
+
+#imprint {
+    margin-bottom: 3em
 }
-#impressum .verlagsinfo dt {
- font-weight:700;
+
+#imprint address {
+    font-style: normal
 }
-#impressum .verlagsinfo dd {
- margin:0 0 1em
+
+#imprint address dl {
+    margin: 0
 }
-#impressum .verantwortlich {
- margin-bottom:1em
+
+#imprint address dl dd,
+#imprint address dl dt {
+    float: left;
+    margin-left: 0
 }
-#impressum .verantwortlich p {
- margin:0
+
+#imprint address dl dt {
+    font-weight: 400;
+    clear: both;
+    width: 4em
 }
-#impressum .abschluss,
-#impressum .redaktion {
- margin-top:1.5em
+
+#imprint address .pf {
+    display: block;
+    margin: .25em 0
 }
+
+#imprint .verlagsinfo dt {
+    font-weight: 700;
+}
+
+#imprint .verlagsinfo dd {
+    margin: 0 0 1em
+}
+
+#imprint .verantwortlich {
+    margin-bottom: 1em
+}
+
+#imprint .verantwortlich p {
+    margin: 0
+}
+
+#imprint .abschluss,
+#imprint .redaktion {
+    margin-top: 1.5em
+}
+
 #kontakt {
- position:relative;
- margin-bottom:1em
+    position: relative;
+    margin-bottom: 1em
 }
+
 .cgroup:after,
 .cgroup:before {
- display:table;
- content:" "
+    display: table;
+    content: " "
 }
+
 .cgroup:after {
- clear:both
+    clear: both
 }
 
 h4 {
- font-size: 1rem;
+    font-size: 1rem;
 }
