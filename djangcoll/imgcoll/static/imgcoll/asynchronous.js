@@ -49,4 +49,4 @@ function sendProcessingRequest() {
 let idEmail = document.getElementById("id_email");
 if (idEmail) idEmail.addEventListener('keyup', sendCalibrationDataRequest);
 let idDiv = document.getElementById("processingID");
-if (idDiv) setTimeout(sendProcessingRequest, 5000);
+if (idDiv) setTimeout(sendProcessingRequest, 500000);

@@ -81,9 +81,9 @@ msgstr "Nahrungsanalysator"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:21
 msgid ""
-"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt."
+"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt.  Lesen Sie die Hintergründe in "
 msgstr ""
-"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt."
+"Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt. Lesen Sie die Hintergründe in "
 
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:15
@@ -172,6 +172,10 @@ msgstr "Ihre Daten werden verarbeitet. Bitte Warten..."
 #: imgcoll/templates/imgcoll/upload_calibration.html:33
 msgid "processing..."
 msgstr "Verarbeitung läuft..."
+
+#: imgcoll/templates/imgcoll/upload_calibration.html:46
+msgid "Results:"
+msgstr "Ergebnisse:"
 
 #: imgcoll/templates/imgcoll/upload_calibration.html:39
 msgid "measured parameter"

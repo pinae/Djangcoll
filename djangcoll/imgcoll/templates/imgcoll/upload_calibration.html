@@ -19,7 +19,9 @@
       <h2 id="subtitle">{% translate "Food analyzer" %}</h2>
     {% if not cal_obj %}
     {# !!! TODO Übersetzung: Neuer Absatz #}
-      <p>{% translate "Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt." %}</p>
+      <p>{% translate "Dies ist eine Testinstanz von FAIGE (Foodscan Artificial Intelligence Generic Entry), mit der Sie Inhaltsstoffe in Speisen analysieren können. Derzeit ist die Analyse beschränkt auf Stärke, Laktosegehalt und Insektenprotein beschränkt. Lesen Sie die Hintergründe in " %}
+      <a href="https://select.heise.de/ct/2023/8/seite-40" target="_blank">c’t 8/2023</a>.
+      </p>
       {# !!! TODO Übersetzung Absatz aufgespalten #}
       <p>{% translate "The first image should contain an empty plate. This image is used for camera calibration." %}</p>
       <div class="pics">
@@ -63,6 +65,7 @@
         <div style="display: none" id="processingID">{{ cal_obj.pk }}</div>
         {% csrf_token %}
         <div id="results" style="display: none;">
+        <h3>{% translate "Results:" %}</h3>
           <table>
             <tr><th>{% translate "measured parameter" %}</th><th>{% translate "measured value" %}</th></tr>
             <tr><td>{% translate "amylum" %}</td><td id="amylum"></td></tr>
