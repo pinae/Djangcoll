@@ -63,7 +63,7 @@ def calibration_data_upload(request):
     })
 
 
-def impressum(request):
+def imprint(request):
     return render(request, 'imgcoll/impressum.html')
 
 
